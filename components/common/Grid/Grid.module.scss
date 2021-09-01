@@ -1,0 +1,11 @@
+.container {
+  height: 500px;
+  width: 500px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(4, minmax(0, 1fr));
+}
+
+.cell {
+  border: 1px dashed var(--white-2);
+}

@@ -1,0 +1,64 @@
+$colors: () !default;
+$colors: map-merge(
+  (
+    dark-1: #0a0a0a,
+    dark-2: #121212,
+    white-2: rgba(255, 255, 255, 0.25),
+  ),
+  $colors
+);
+
+@mixin text-vulcan($parent, $color) {
+  #{$parent} {
+    color: $color;
+  }
+  #{$parent}-i {
+    color: $color !important;
+  }
+}
+
+// backgrounds mixin
+@mixin background-vulcan($parent, $color) {
+  #{$parent} {
+    background: $color;
+  }
+  #{$parent}-i {
+    background: $color !important;
+  }
+}
+
+// border-color mixin
+@mixin border-vulcan($parent, $color) {
+  #{$parent} {
+    border-color: $color;
+  }
+  #{$parent}-i {
+    border-color: $color !important;
+  }
+}
+
+// text color classes mapping
+@each $color, $value in $colors {
+  @include text-vulcan(".text-vulcan-#{$color}", $value);
+}
+
+// background color classes mapping
+@each $color, $value in $colors {
+  @include background-vulcan(".background-vulcan-#{$color}", $value);
+}
+
+// border color classes mapping
+@each $color, $value in $colors {
+  @include border-vulcan(".border-vulcan-#{$color}", $value);
+}
+
+@mixin create-css-variable($key, $value) {
+  #{--#{$key}}: $value;
+}
+
+// This creates css varaibles
+:root {
+  @each $color, $value in $colors {
+    @include create-css-variable($color, $value);
+  }
+}
