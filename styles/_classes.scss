@@ -1,0 +1,52 @@
+.caption {
+  background-color: var(--dark-3);
+  padding: 9px 8px;
+  border-radius: 1px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff80;
+}
+
+.magnifying-glass {
+  $thickness: 3px;
+  height: 33px;
+  width: 33px;
+  border-radius: 100%;
+  border: $thickness solid var(--white-3);
+  position: relative;
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: var(--white-3);
+  }
+  &::after {
+    $width: 17px;
+    height: $thickness;
+    width: $width;
+    border-radius: 10px;
+    bottom: 0px;
+    right: -12px;
+    transform-origin: top left;
+    transform: rotate(50deg);
+  }
+  //   &::before {
+  //     height: 15px;
+  //     width: 15px;
+  //     border-radius: 100%;
+  //   }
+  & > div {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: var(--white-3);
+    left: 20%;
+    top: 20%;
+    border-radius: 100%;
+    border: 2px solid red;
+    background-color: transparent;
+  }
+}
