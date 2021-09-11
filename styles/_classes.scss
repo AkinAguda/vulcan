@@ -10,18 +10,22 @@
 }
 
 .magnifying-glass {
+  opacity: 0.7;
   $thickness: 3px;
   height: 33px;
   width: 33px;
   border-radius: 100%;
-  border: $thickness solid var(--white-3);
+  border: $thickness solid var(--white);
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &::before,
   &::after {
     content: "";
     display: block;
     position: absolute;
-    background-color: var(--white-3);
+    background-color: var(--white);
   }
   &::after {
     $width: 17px;
@@ -33,20 +37,36 @@
     transform-origin: top left;
     transform: rotate(50deg);
   }
-  //   &::before {
-  //     height: 15px;
-  //     width: 15px;
-  //     border-radius: 100%;
-  //   }
   & > div {
-    position: absolute;
-    height: 15px;
-    width: 15px;
-    background-color: var(--white-3);
-    left: 20%;
-    top: 20%;
+    position: relative;
+    $dim: 15px;
+    height: $dim;
+    width: $dim;
     border-radius: 100%;
-    border: 2px solid red;
+    border: 3px solid transparent;
     background-color: transparent;
+    border-left-color: var(--white);
+    transform: rotate(15deg) translateX(-3px);
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      height: 3px;
+      width: 3px;
+      overflow: hidden;
+      background-color: var(--white);
+      border-radius: 100%;
+    }
+
+    &::before {
+      transform: translateY(-1.5px) translateX(-1.5px);
+    }
+
+    &::after {
+      height: 2.8px;
+      width: 2.8px;
+      transform: translateY(4.5px) translateX(-1.5px) rotate(45deg);
+    }
   }
 }
