@@ -1,6 +1,7 @@
 import React from "react";
 import { mergeClasses } from "../../utility/helpers";
 import Grid from "../common/Grid";
+import Fragment from "../common/Fragment";
 import classes from "./Intro.module.scss";
 
 const Intro: React.FC = () => (
@@ -20,7 +21,10 @@ const Intro: React.FC = () => (
         <div />
         <div />
         <div />
+        <div />
+        <div />
       </div>
+      <Fragment className={classes.fragment} />
       <div
         className={mergeClasses("magnifying-glass", classes.magnifyingGlass)}
       >
