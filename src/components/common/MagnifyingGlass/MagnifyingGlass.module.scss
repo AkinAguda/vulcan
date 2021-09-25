@@ -1,0 +1,64 @@
+.container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    color: #fff;
+    height: 82.5%;
+    width: 82.5%;
+    border-radius: 50%;
+    background: radial-gradient(
+      ellipse at center,
+      transparent 60%,
+      rgba(white, 1) 51.5%
+    );
+  }
+  .glare {
+    position: absolute;
+    height: 18.975%;
+    width: 18.975%;
+    top: 25%;
+    left: 14%;
+    border-top-left-radius: 100%;
+    border-bottom-right-radius: -30%;
+    transform: rotate(-17deg) translateY(5%);
+    background-image: radial-gradient(
+      ellipse at right bottom,
+      transparent 0%,
+      transparent 50%,
+      var(--light) 50%
+    );
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 30%;
+      width: 30%;
+      border-radius: 100%;
+      background-color: var(--light);
+    }
+    &::before {
+      top: 0;
+      right: -18%;
+    }
+    &::after {
+      top: 90%;
+    }
+  }
+  .handle {
+    height: 7%;
+    background-color: var(--light);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 47%;
+    transform-origin: bottom right;
+    transform: rotate(45deg);
+    border-radius: 1000px;
+  }
+}

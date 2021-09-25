@@ -2,6 +2,7 @@ import React from "react";
 import { mergeClasses } from "../../utility/helpers";
 import Grid from "../common/Grid";
 import Fragment from "../common/Fragment";
+import MagnifyingGlass from "../common/MagnifyingGlass";
 import classes from "./Intro.module.scss";
 
 const Intro: React.FC = () => (
@@ -26,9 +27,10 @@ const Intro: React.FC = () => (
       </div>
       <Fragment className={classes.fragment} />
       <div
-        className={mergeClasses("magnifying-glass", classes.magnifyingGlass)}
+        style={{ height: "40px", width: "40px", opacity: "0.7" }}
+        className={classes.magnifyingGlass}
       >
-        <div />
+        <MagnifyingGlass />
       </div>
     </div>
   </div>
