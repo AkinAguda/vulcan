@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .container {
   height: 100vh;
   width: 100%;
@@ -20,12 +22,12 @@
     border-radius: 1px;
   }
   &::before {
-    left: ($smallSquareDim / 2) * -1;
-    top: ($smallSquareDim / 2) * -1;
+    left: math.div($smallSquareDim, 2) * -1;
+    top: math.div($smallSquareDim, 2) * -1;
   }
   &::after {
-    left: calc(25% - #{($smallSquareDim / 2)});
-    top: calc(25% - #{($smallSquareDim / 2)});
+    left: calc(25% - #{math.div($smallSquareDim, 2)});
+    top: calc(25% - #{math.div($smallSquareDim, 2)});
   }
   .gridWrapper {
     position: absolute;
@@ -80,10 +82,14 @@
     position: absolute;
     right: calc(12.5% - 16.5px);
     top: calc(87.5% - 16.5px);
+    height: 40px;
+    width: 40px;
   }
   .fragment {
     position: absolute;
     left: 44px;
     top: calc(50% + 45px);
+    height: 38px;
+    width: 38px;
   }
 }

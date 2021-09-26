@@ -1,26 +1,22 @@
-@use "sass:math";
-
 .container {
-  $dim: 38px;
-  $half-bar: 2px;
-  $gap: 0.3px;
-  $border-radius: 8px;
+  $dim: 100%;
+  $gap: 0.114%;
+  $border-radius: 10000px;
   $bar-height: 55%;
 
   position: relative;
 
   height: $dim;
   width: $dim;
-  opacity: 0.7;
   transform: rotate(-45deg);
 
   .bar {
     position: absolute;
     top: -12.5%;
     transform: rotate(-125deg);
-    left: calc(50% - #{$half-bar});
+    left: calc(50% - 5.26%);
     height: calc(125%);
-    width: (2 * $half-bar) - $gap;
+    width: calc(10.46% - #{$gap});
     background-color: white;
     border-radius: 100px;
   }
@@ -29,7 +25,7 @@
     height: 100%;
     width: 100%;
     position: relative;
-    border-radius: math.div($border-radius, 4);
+    border-radius: 4%;
     overflow: hidden;
     & > * {
       position: absolute;
@@ -48,7 +44,7 @@
       left: 0;
       &::before,
       &::after {
-        height: $half-bar;
+        height: 5.26%;
         width: $bar-height;
       }
       &::before {
@@ -56,7 +52,7 @@
       }
       &::after {
         border-bottom-right-radius: $border-radius;
-        transform: translateY($half-bar - $gap);
+        transform: translateY(85%);
       }
       & > :first-child {
         height: $dim;
@@ -68,14 +64,14 @@
       left: 0;
       &::before,
       &::after {
-        width: $half-bar;
+        width: 5.26%;
         height: $bar-height;
       }
       &::before {
         border-bottom-left-radius: $border-radius;
       }
       &::after {
-        transform: translateX($half-bar - $gap);
+        transform: translateX(85%);
         border-bottom-right-radius: $border-radius;
       }
     }
@@ -84,7 +80,7 @@
       right: 0;
       &::before,
       &::after {
-        width: $half-bar;
+        width: 5.26%;
         height: $bar-height;
       }
       &::before {
@@ -95,7 +91,7 @@
       &::after {
         bottom: 0;
         right: 0;
-        transform: translateX(-1 * ($half-bar - $gap));
+        transform: translateX(-85%);
         border-top-left-radius: $border-radius;
       }
     }
@@ -104,7 +100,7 @@
       right: 0;
       &::before,
       &::after {
-        height: $half-bar;
+        height: 5.26%;
         width: $bar-height;
       }
       &::before {
@@ -115,7 +111,7 @@
       &::after {
         bottom: 0;
         right: 0;
-        transform: translateY(-1 * ($half-bar - $gap));
+        transform: translateY(-85%);
         border-top-left-radius: $border-radius;
       }
     }

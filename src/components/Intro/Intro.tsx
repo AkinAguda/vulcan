@@ -26,12 +26,7 @@ const Intro: React.FC = () => (
         <div />
       </div>
       <Fragment className={classes.fragment} />
-      <div
-        style={{ height: "40px", width: "40px", opacity: "0.7" }}
-        className={classes.magnifyingGlass}
-      >
-        <MagnifyingGlass />
-      </div>
+      <MagnifyingGlass className={classes.magnifyingGlass} />
     </div>
   </div>
 );
