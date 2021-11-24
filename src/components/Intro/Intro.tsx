@@ -1,12 +1,21 @@
 import React from "react";
-import { mergeClasses } from "../../utility/helpers";
-import Grid from "../common/Grid";
-import Fragment from "../common/Fragment";
-import MagnifyingGlass from "../common/MagnifyingGlass";
+import { mergeClasses } from "@vulcan/utility/helpers";
+import { Grid, Fragment, MagnifyingGlass } from "@vulcan/common";
 import classes from "./Intro.module.scss";
 
 const Intro: React.FC = () => (
   <div className={classes.container}>
+    <div className={classes.left}>
+      <h1 className={mergeClasses("text-vulcan-white-1", classes.header)}>
+        Welcome to Vulcan, your favourite Julia template
+      </h1>
+      <p className="text-vulcan-white-3">
+        This is a template that is focused on providing you with a more
+        flexible, intuitve and just downright beautiful interface when building
+        with Julia
+      </p>
+      <button className={classes.button}>Get Template</button>
+    </div>
     <div className={classes.right}>
       <div className={classes.gridWrapper}>
         <Grid />

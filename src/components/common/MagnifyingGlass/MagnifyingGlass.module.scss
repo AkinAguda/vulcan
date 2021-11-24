@@ -30,7 +30,7 @@
       ellipse at right bottom,
       transparent 0%,
       transparent 50%,
-      var(--light) 50%
+      var(--white-1) 50%
     );
     &::before,
     &::after {
@@ -40,7 +40,7 @@
       height: 30%;
       width: 30%;
       border-radius: 100%;
-      background-color: var(--light);
+      background-color: var(--white-1);
     }
     &::before {
       top: 0;
@@ -52,7 +52,7 @@
   }
   .handle {
     height: 7%;
-    background-color: var(--light);
+    background-color: var(--white-1);
     position: absolute;
     bottom: 0;
     right: 0;

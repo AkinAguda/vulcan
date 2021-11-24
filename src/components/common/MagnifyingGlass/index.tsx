@@ -1,5 +1,5 @@
 import React from "react";
-import { mergeClasses } from "../../../utility/helpers";
+import { mergeClasses } from "@vulcan/utility/helpers";
 import classes from "./MagnifyingGlass.module.scss";
 
 const MagnifyingGlass: React.FC<React.HTMLProps<HTMLDivElement>> = ({

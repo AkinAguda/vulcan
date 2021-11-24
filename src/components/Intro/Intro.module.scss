@@ -5,19 +5,51 @@
   width: 100%;
   display: flex;
   align-items: center;
+  gap: 5vw;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.header {
+  font-size: 3rem;
+}
+
+.left {
+  max-width: 618px;
+  * {
+    margin: 0;
+  }
+  p {
+    max-width: 454px;
+    margin-top: 8px;
+    margin-bottom: 48px;
+  }
+}
+
+.button {
+  background-color: transparent;
+  border: 2px solid var(--white-1);
+  color: var(--white-1);
+  width: 214px;
+  height: 75px;
+  cursor: pointer;
 }
 
 .right {
   $smallSquareDim: 15px;
-  height: 500px;
-  width: 500px;
+  height: 40vw;
+  width: 40vw;
+  max-width: 600px;
+  max-height: 600px;
+  min-width: 300px;
+  min-height: 300px;
   position: relative;
   &::before,
   &::after {
     content: "";
     width: $smallSquareDim;
     height: $smallSquareDim;
-    background-color: var(--light);
+    background-color: var(--white-1);
     position: absolute;
     border-radius: 1px;
   }
@@ -82,16 +114,16 @@
     position: absolute;
     right: calc(12.5% - 16.5px);
     top: calc(87.5% - 16.5px);
-    height: 40px;
-    width: 40px;
+    height: 8%;
+    width: 8%;
     opacity: 0.7;
   }
   .fragment {
     position: absolute;
-    left: 44px;
-    top: calc(50% + 45px);
-    height: 38px;
-    width: 38px;
+    left: 8.8%;
+    top: calc(59%);
+    height: 7.6%;
+    width: 7.6%;
     opacity: 0.7;
   }
 }
