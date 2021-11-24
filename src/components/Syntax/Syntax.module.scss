@@ -6,8 +6,8 @@
 }
 
 .container {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   background-color: var(--dark-2);
 }
 
@@ -33,43 +33,37 @@
 }
 
 .orbit {
-  position: absolute;
-  width: 60%;
+  animation: spin 4s linear infinite;
   height: 60%;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 60%;
+}
+
+.sphere1,
+.sphere2,
+.sphere3,
+.sphere4 {
+  position: absolute;
+  width: 8%;
+  height: 8%;
   border-radius: 100%;
-  .planet {
-    height: 100%;
-    width: 100%;
-    border-top: 3px solid var(--white-1);
-    border-radius: 100%;
-    position: relative;
-    margin-top: -3px;
-    clip-path: polygon(0 0%, 106% 0, 100% 38%, 0 61%);
-    animation: spin 4s linear infinite;
-  }
-  .planet::after {
-    content: "";
-    display: block;
-    height: 20px;
-    width: 20px;
-    border-radius: 100%;
-    background-color: var(--white-1);
-    position: absolute;
-    right: -1px;
-    top: 31%;
-  }
-  //   .planet::before {
-  //     content: "";
-  //     display: block;
-  //     // height: 20px;
-  //     // width: 20px;
-  //     width: 20px;
-  //     height: 40px;
-  //     background-color: red;
-  //     z-index: 2;
-  //     position: absolute;
-  //     right: -10px;
-  //     top: 38%;
-  //   }
+}
+
+.sphere1 {
+  background: rgba(240, 223, 45, 0.4);
+  top: 3.2%;
+}
+
+.sphere2 {
+  background: rgba(254, 0, 0, 0.4);
+  right: 3.2%;
+}
+
+.sphere3 {
+  background: #5bd19f;
+  bottom: 3.2%;
+}
+
+.sphere4 {
+  background: rgba(24, 160, 251, 0.4);
+  left: 3.2%;
 }

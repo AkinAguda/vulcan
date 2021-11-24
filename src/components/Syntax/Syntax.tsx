@@ -1,6 +1,6 @@
 import React from "react";
 import { mergeClasses } from "@vulcan/utility/helpers";
-import { Grid, MagnifyingGlass } from "@vulcan/common";
+import { Grid, Orbit } from "@vulcan/common";
 import classes from "./Syntax.module.scss";
 
 const Syntax: React.FC = () => (
@@ -11,8 +11,12 @@ const Syntax: React.FC = () => (
           <Grid />
         </div>
         <div className={classes.orbit}>
-          <div className={classes.planet}></div>
+          <Orbit />
         </div>
+        <div className={classes.sphere1}></div>
+        <div className={classes.sphere2}></div>
+        <div className={classes.sphere3}></div>
+        <div className={classes.sphere4}></div>
       </div>
     </div>
   </div>
