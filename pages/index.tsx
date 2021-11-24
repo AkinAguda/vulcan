@@ -1,7 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import classes from "../styles/Home.module.css";
 import Intro from "../src/components/Intro";
+import Syntax from "../src/components/Syntax";
+import classes from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
   return (
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
 
       <main>
         <Intro />
+        <Syntax />
       </main>
 
       <footer></footer>

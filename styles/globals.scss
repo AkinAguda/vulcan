@@ -28,3 +28,13 @@ h6,
 p {
   color: var(--light-1);
 }
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
