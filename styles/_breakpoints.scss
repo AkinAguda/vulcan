@@ -1,0 +1,24 @@
+$intro: (
+  large-tab: 1390px,
+  tab: 1007px,
+);
+
+$syntax: (
+  large-tab: 1168px,
+  tab: 1007px,
+);
+
+$breakpoints: (
+  intro: $intro,
+);
+
+@function get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}
+
+@function mq($keys...) {
+  @return get($breakpoints, $keys...);
+}

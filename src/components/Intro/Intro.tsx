@@ -4,8 +4,11 @@ import { Grid, Fragment, MagnifyingGlass } from "@vulcan/common";
 import classes from "./Intro.module.scss";
 
 const Intro: React.FC = () => (
-  <div className="container">
-    <div className={mergeClasses("wrapper", classes.container)}>
+  <div className={mergeClasses("container", classes.container)}>
+    <div className={classes.mobRight}>
+      <Grid />
+    </div>
+    <div className={mergeClasses("wrapper", classes.wrapper)}>
       <div className={classes.left}>
         <h1 className={mergeClasses("text-vulcan-white-1", classes.header)}>
           Welcome to Vulcan, your favourite Julia template
@@ -17,6 +20,7 @@ const Intro: React.FC = () => (
         </p>
         <button className={classes.button}>Get Template</button>
       </div>
+
       <div className={classes.right}>
         <div className={classes.gridWrapper}>
           <Grid />

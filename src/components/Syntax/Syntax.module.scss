@@ -1,3 +1,5 @@
+@import "../../../styles/breakpoints";
+
 @keyframes spin {
   100% {
     -webkit-transform: rotate(360deg);
@@ -9,6 +11,27 @@
   padding-top: 100px;
   padding-bottom: 100px;
   background-color: var(--dark-2);
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5vw;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.left {
+  max-width: 618px;
+  @media (max-width: mq(intro, large-tab)) {
+    max-width: 500px;
+  }
+  * {
+    margin: 0;
+  }
+  p {
+    max-width: 580px;
+  }
 }
 
 .right {
@@ -23,6 +46,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: mq(intro, tab)) {
+    display: none;
+  }
 }
 
 .gridWrapper {
@@ -66,4 +92,22 @@
 .sphere4 {
   background: rgba(24, 160, 251, 0.4);
   left: 3.2%;
+}
+
+.footnote {
+  padding: 23px 44px 22px 16px;
+  color: var(--white-1);
+  border-radius: 4px;
+  background-color: var(--dark-4);
+  margin-top: 24px;
+}
+
+.heading {
+  max-width: 405px;
+  margin-bottom: 16px;
+}
+
+.paragraph2 {
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
