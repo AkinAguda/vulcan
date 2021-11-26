@@ -18,7 +18,10 @@ const Intro: React.FC = () => (
           flexible, intuitve and just downright beautiful interface when
           building with Julia
         </p>
-        <button className={classes.button}>Get Template</button>
+        <button className={classes.button}>
+          <div />
+          <span>Get Template</span>
+        </button>
       </div>
 
       <div className={classes.right}>
