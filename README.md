@@ -1,3 +1,7 @@
+## This project is in development. UI Design is [here](https://www.figma.com/file/eXPkx01WoXH90uQGUQtgZ5/Vulcan?node-id=3%3A8)
+
+## Use CSS only. No images or vector graphics :)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
