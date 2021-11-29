@@ -1,0 +1,26 @@
+.container {
+  padding-top: 77px;
+  padding-bottom: 77px;
+  max-width: 1008px;
+  margin: auto;
+}
+
+.heading {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 48px;
+}
+
+.extensions {
+  display: flex;
+  gap: 80px;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  & > * {
+    min-width: 340px;
+    width: 100%;
+    flex: 1 1 0;
+    max-width: 450px;
+  }
+}

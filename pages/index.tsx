@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Intro from "../src/components/Intro";
 import Syntax from "../src/components/Syntax";
+import Extensions from "../src/components/Extensions";
 import classes from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
       <main>
         <Intro />
         <Syntax />
+        <Extensions />
       </main>
 
       <footer></footer>

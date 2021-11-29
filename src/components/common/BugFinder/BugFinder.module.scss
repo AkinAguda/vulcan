@@ -1,0 +1,78 @@
+@use "sass:math";
+
+.container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  .circle {
+    height: 58.7%;
+    width: 58.7%;
+    border-radius: 50%;
+    background: radial-gradient(
+      ellipse at center,
+      transparent 60%,
+      rgba(white, 1) 51.5%
+    );
+  }
+  .crosshairs {
+    $thickness: 8%;
+    $length: 17%;
+    height: 58.7%;
+    width: 58.7%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    & > * {
+      position: absolute;
+      background-color: white;
+      border-radius: 20px;
+    }
+    & > :nth-child(1) {
+      height: $length;
+      width: $thickness;
+      left: calc(50% - #{math.div($thickness, 2)});
+    }
+    & > :nth-child(2) {
+      width: $length;
+      height: $thickness;
+      background-color: white;
+      right: 0;
+      top: calc(50% - #{math.div($thickness, 2)});
+    }
+    & > :nth-child(3) {
+      height: $length;
+      border-radius: 20px;
+      width: $thickness;
+      bottom: 0;
+      left: calc(50% - #{math.div($thickness, 2)});
+    }
+    & > :nth-child(4) {
+      width: $length;
+      height: $thickness;
+      background-color: white;
+      left: 0;
+      top: calc(50% - #{math.div($thickness, 2)});
+    }
+  }
+  .bugWrapper {
+    height: 45%;
+    width: 45%;
+    position: absolute;
+    top: 11%;
+    left: 5%;
+    transform: rotate(33deg);
+  }
+  .handle {
+    width: 12%;
+    height: 40%;
+    transform-origin: top;
+    transform: rotate(35deg);
+    margin-top: -8%;
+    margin-left: 6%;
+    position: relative;
+    border: 2px solid white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}

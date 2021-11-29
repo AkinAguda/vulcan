@@ -71,7 +71,8 @@
     left: 0;
     top: 0;
     position: absolute;
-    height: calc(100% + 1px);
+    height: calc(100% + 2px);
+    transform: translateY(-1px);
     width: 0px;
     background-color: var(--white-1);
     transition: width 0.3s;
