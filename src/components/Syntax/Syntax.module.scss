@@ -26,6 +26,9 @@
   @media (max-width: mq(intro, large-tab)) {
     max-width: 500px;
   }
+  @media (max-width: mq(intro, tab)) {
+    max-width: 100%;
+  }
   * {
     margin: 0;
   }

@@ -17,7 +17,7 @@ const Home: NextPage = () => {
 
       <main>
         <Intro />
-        <Features />
+        {/* <Features /> */}
         <Syntax />
         <Extensions />
       </main>

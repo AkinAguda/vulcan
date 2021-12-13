@@ -38,6 +38,10 @@
     max-width: 500px;
   }
 
+  @media (max-width: mq(intro, tab)) {
+    max-width: 600px;
+  }
+
   * {
     margin: 0;
   }
